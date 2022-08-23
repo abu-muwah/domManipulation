@@ -1,72 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="/dist/output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body class="border-box p-0 bg-slate-900">
-    <header>
-      <div class="flex justify-between items-center p-3">
-        <a
-          href="#"
-          class="relaod bg-white px-5 py-2 font-bold rounded-lg transition hover:bg-slate-300 ease-in-out duration-300"
-          >Try Again</a
-        >
-        <span class="text-white">(Between 1 and 20)</span>
+      <meta charset="UTF-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Document</title>
+      <link href="/dist/output.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="style.css"/>
+   </head>
+  <body class="border-box p-0 bg-slate-900 font-DynaPuff">
+      <header>
+         <div class="flex justify-between items-center p-3">
+            <a href="#" class="relaod bg-white px-5 py-2 font-bold transition hover:bg-slate-300 ease-in-out duration-300">Try Again</a>
+            <span class="text-white">(Between 1 and 20)</span>
+         </div>
+      </header>
+      <div class="flex flex-col justify-center items-center h-screen">
+         <span class="msg text-white text-center mb-7 text-5xl">Start Guessing!!</span>
+         <div>
+            <h1 class="page-title text-white text-center mb-5 text-3xl">
+               Guess Your Number
+            </h1>
+            <div class="input&btn flex gap-2">
+               <input min="0" max="20" type="number" placeholder="Enter numbers.." id="input" class="input w-full bg-white pl-5 pr-5 py-3 block outline-none"/>
+               <a href="#" id="add" class="add-btn bg-white px-8 flex items-center font-bold text-neutral-600 transition hover:bg-slate-300 ease-in-out duration-300">TEST</a>
+            </div>
+            <div class="number h-16 w-24 mx-auto mt-10 bg-slate-400 text-center text-6xl rounded-lg">?</div>
+            <div class="h-28"></div>
+            <div class="flex justify-between items-center">
+               <div>
+                  <span class="text-white text-center mb-7 mr-2 text-3xl">HIGHSCORE:</span>
+                  <span class="highscore text-white text-center mb-7 mr-7 text-3xl">0</span>
+               </div>
+               <div>
+                  <span class="text-white text-center mb-7 mr-2 text-3xl">SCORE:</span>
+                  <span class="score text-white text-center mb-7 text-3xl">20</span>
+               </div>
+            </div>
+         </div>
       </div>
-    </header>
-    <div class="flex flex-col justify-center items-center h-screen">
-      <span class="msg text-white text-center mb-7 text-5xl"
-        >Start Guessing!!</span
-      >
-      <div>
-        <h1 class="page-title text-white text-center mb-5 text-3xl">
-          Guess Your Number
-        </h1>
-        <div class="input&btn flex gap-2">
-          <input
-            min="0"
-            max="20"
-            type="number"
-            id="input"
-            class="input rounded-l-full w-full bg-white pl-5 pr-5 py-3 block outline-none"
-          />
-          <a
-            href="#"
-            id="add"
-            class="add-btn bg-white rounded-r-full px-8 flex items-center font-bold text-neutral-600 transition hover:bg-slate-300 ease-in-out duration-300"
-            >TEST</a
-          >
-        </div>
-        <div
-          class="number h-16 w-24 mx-auto mt-10 bg-slate-400 text-center text-6xl rounded-lg"
-        >
-          ?
-        </div>
-        <div class="h-28"></div>
-        <div class="flex justify-between items-center">
-          <div>
-            <span class="text-white text-center mb-7 mr-2 text-3xl"
-              >HIGHSCORE:</span
-            >
-            <span class="highscore text-white text-center mb-7 mr-7 text-3xl"
-              >0</span
-            >
-          </div>
-          <div>
-            <span class="text-white text-center mb-7 mr-2 text-3xl"
-              >SCORE:</span
-            >
-            <span class="score text-white text-center mb-7 text-3xl">20</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="script.js"></script>
-  </body>
+      <script src="script.js"></script>
+   </body>
 </html>
