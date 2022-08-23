@@ -105,7 +105,8 @@ module.exports = {
       },
       fontFamily: {
         'sans': ['Roboto', 'sans-serif'],
-        'isax': ['iconsax']
+        'isax': ['iconsax'],
+        'DynaPuff': ['DynaPuff', 'cursive']
       },
       fontSize: {
         '4.5xl': '40px'
