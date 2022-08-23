@@ -22,7 +22,12 @@
 // document.querySelector("a").style.backgroundColor = "#999";
 // document.querySelector("a").style.color = "black";
 
-const secretNumber = Math.trunc(Math.random() * 20 + 1);
+const generateRandomNumber = () => {
+   return Math.trunc(Math.random() * 20 + 1);
+}
+
+let secretNumber = generateRandomNumber();
+console.log(secretNumber)
 
 let score = 20;
 let highscore;
@@ -31,7 +36,7 @@ const setTextContent = (element, value) => {
    document.querySelector(element).textContent = value;
 };
 
-document.querySelector("body").style.backgroundColor = "value";
+document.querySelector("body").style.backgroundColor = "#4a5759";
 
 document.querySelector(".add-btn").addEventListener("click", function () {
    const guess = Number(document.querySelector(".input").value);
@@ -68,7 +73,13 @@ document.querySelector(".add-btn").addEventListener("click", function () {
    }
 });
 
-document.querySelector(".relaod").addEventListener("click", function () {
+document.querySelector(".reset").addEventListener("click", function () {
    score = 20;
    setTextContent(".score", score);
+   document.querySelector("body").style.backgroundColor = "#4a5759";
+   setTextContent('.number', '?')
+   setTextContent('.msg', 'Start Guessing!!')
+   setTextContent('.input', '')
+   secretNumber = generateRandomNumber()
+
 });
