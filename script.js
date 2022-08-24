@@ -41,30 +41,26 @@ document.querySelector("body").style.backgroundColor = "#4a5759";
 document.querySelector(".add-btn").addEventListener("click", function () {
    const guess = Number(document.querySelector(".input").value);
 
+   // when there is no guess at all
    if (!guess) {
       document.querySelector(".msg").textContent = "No Number :(";
+      
+      // when the guess is correct
    }else if (guess === secretNumber) {
       document.querySelector("body").style.backgroundColor = "green";
       setTextContent(".number", secretNumber);
       setTextContent(".msg", "Congrats!! You Did it");
-      // document.querySelector(".input&btn").style.display = none;
       highscore = score;
       setTextContent(".highscore", highscore);
-   }else if (guess > secretNumber) {
+
+      // when the guess is wrong
+   }else if (guess !== secretNumber) {
       if (score > 1) {
-         setTextContent(".msg", "Too High!");
+         document.querySelector('.msg').textContent = guess > secretNumber ? "Too High!! Try Lower" : "Too Low!! Try Higher"
          score--;
          setTextContent(".score", score);
-      }else {
-         document.querySelector("body").style.backgroundColor = "red";
-         setTextContent(".msg", "Nahh, get outta here!");
-         setTextContent(".score", 0);
-      }
-   }else if (guess < secretNumber) {
-      if (score > 1) {
-         setTextContent(".msg", "Too Low!");
-         score--;
-         setTextContent(".score", score);
+
+         // when user run out of score
       }else {
          document.querySelector("body").style.backgroundColor = "red";
          setTextContent(".msg", "Nahh, get outta here!");
